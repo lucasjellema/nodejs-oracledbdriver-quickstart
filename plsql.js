@@ -13,6 +13,7 @@ oracledb.getConnection(
       console.error(err.message);
       return;
     }
+var empId = 199;    
 var bindvars = { employeeId: { val: empId , dir: oracledb.BIND_IN, type: oracledb.NUMBER }
                , salary: { dir: oracledb.BIND_OUT, type: oracledb.NUMBER }                            
                };	
