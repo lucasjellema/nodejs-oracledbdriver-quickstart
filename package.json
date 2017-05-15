@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-oracledbdriver-quickstart",
+  "version": "1.0.0",
+  "description": "Simple scripts to try out Oracle DB Driver for Node.js - especially in Virtual Machine with Oracle Database 11gR2 XE",
+  "main": "dbconfig.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasjellema/nodejs-oracledbdriver-quickstart.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "oracledb": "^1.13"
+  },
+  "bugs": {
+    "url": "https://github.com/lucasjellema/nodejs-oracledbdriver-quickstart/issues"
+  },
+  "homepage": "https://github.com/lucasjellema/nodejs-oracledbdriver-quickstart#readme"
+}
