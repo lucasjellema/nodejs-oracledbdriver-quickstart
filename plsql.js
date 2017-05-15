@@ -17,11 +17,13 @@ var empId = 199;
 var bindvars = { employeeId: { val: empId , dir: oracledb.BIND_IN, type: oracledb.NUMBER }
                , salary: { dir: oracledb.BIND_OUT, type: oracledb.NUMBER }                            
                };	
-var plsqlStatement = "begin get_salary( p_id => :employeeId, p_salary=> :salary); end;";
+var plsqlStatement = "begin get_salary( p_id => :employeeId , p_salary=> :salary); end;";
 var options = {"autoCommit":true};  
 connection.execute( plsqlStatement , bindvars, options,  function (err, result) {
   if(err) {
-    // handle error    doRelease(connection); 
+    // handle error   
+console.error('Error: '+ err);
+ doRelease(connection); 
    } 
    else {
      var salary = result.outBinds.salary;
@@ -29,6 +31,7 @@ connection.execute( plsqlStatement , bindvars, options,  function (err, result) 
      doRelease(connection);
    };
   });
+});
 
 function doRelease(connection)
 {
